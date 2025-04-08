@@ -19,6 +19,6 @@ abstract class _Paths {
   static const HOME = '/home';
   static const WISHLIST = '/wishlist';
   static const FILTER = '/filter';
-  static const CARTs = '/cart';
+  static const CART = '/cart';
   static const PROFILE = '/profile';
 }
