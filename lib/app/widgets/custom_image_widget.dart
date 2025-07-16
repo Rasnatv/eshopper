@@ -1,5 +1,5 @@
-import 'dart:io';
 
+import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -95,10 +95,11 @@ class CustomImageWidget extends StatelessWidget {
                           color: color,
                         )
                   : _placeholder));
-
   Widget get _placeholder => SizedBox(
         width: width ?? size?.width,
         height: height ?? size?.height,
         child: const AppShimmer(),
       );
-}
+
+
+  }

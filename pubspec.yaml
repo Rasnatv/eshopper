@@ -17,6 +17,8 @@ dependencies:
   cached_network_image: ^3.4.1
   shimmer: ^3.0.0
   flutter_svg: ^2.0.10+1
+  flutter_rating_bar: ^4.0.1
+  iconsax: ^0.0.8
 
   cupertino_icons: ^1.0.8
 
@@ -28,17 +30,11 @@ dev_dependencies:
   flutter_lints: ^5.0.0
 
 flutter:
-#  assets:
-#    - assets/
-#    - assets/images/
-#    - assets/icons/
   assets:
-    - assets/images/logos/
+    - assets/
     - assets/images/
-    - assets/images/logos/icons/
-    - assets/images/banners/
-    - assets/images/product/
-    - assets/images/logos/payment/
+    - assets/icons/
+    - assets/category/
   fonts:
     - family: NunitoSans
       fonts:

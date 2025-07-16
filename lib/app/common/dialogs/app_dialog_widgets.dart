@@ -104,7 +104,7 @@ class DialogWidget extends StatelessWidget {
                           ),
                         SizedBox(height: 10.sp),
                         Container(
-                          width: MediaQuery.of(context).size.width * .8,
+                          width: MediaQuery.of(context).size.width * .9,
                           padding: EdgeInsets.only(left: 12.w, right: 12.w),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,

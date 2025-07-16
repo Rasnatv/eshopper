@@ -1,64 +1,83 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:innsouls_flutter/app/common/style/app_colors.dart';
-import 'package:innsouls_flutter/app/common/style/app_text_style.dart';
-import 'package:innsouls_flutter/app/widgets/custom_image_widget.dart';
-
-class CategoryTile extends StatelessWidget {
-  const CategoryTile({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          color: AppColors.white,
-          borderRadius: BorderRadius.circular(9.r),
-          boxShadow: [BoxShadow(offset: Offset(0, 5), blurRadius: 10.r, color: AppColors.black.withValues(alpha: .1))]),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.w),
-        child: LayoutBuilder(
-          builder: (context, constraints) => Column(
-            children: [
-              SizedBox(
-                height: constraints.maxHeight * .8,
-                child: GridView.builder(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  padding: EdgeInsets.zero,
-                  gridDelegate:
-                      SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 6.w, crossAxisSpacing: 6.w, childAspectRatio: 1),
-                  itemBuilder: (context, index) => Container(
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(9.r)),
-                    child: LayoutBuilder(
-                        builder: (context, constraints) =>
-                            CustomImageWidget(imageUrl: '', width: constraints.maxWidth, height: constraints.maxHeight)),
-                  ),
-                  itemCount: 4,
-                ),
-              ),
-              SizedBox(
-                height: constraints.maxHeight * .2,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Name', style: AppTextStyle.rTextRalewayBlack17w700),
-                    Container(
-                      padding: EdgeInsets.all(6.w),
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(6.r), color: AppColors.shimmerGray),
-                      child: Text(
-                        '257',
-                        style: AppTextStyle.rTextRalewayBlack12w700,
-                      ),
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+// import 'package:flutter/material.dart';
+// import 'package:flutter_screenutil/flutter_screenutil.dart';
+// import 'package:get/get.dart';
+// import 'package:get/get_core/src/get_main.dart';
+// import 'package:innsouls_flutter/app/common/style/app_colors.dart';
+// import 'package:innsouls_flutter/app/common/style/app_text_style.dart';
+// import 'package:innsouls_flutter/app/widgets/custom_image_widget.dart';
+//
+// import '../../../common/constants/app_images.dart';
+// import '../../../data/models/categorymodel.dart';
+// import '../controllers/categorycontroller.dart';
+//
+// class CategoryTile extends StatelessWidget {
+//   final Category category;
+//
+//   final Map<String, String> categoryImages = {
+//     'beauty': AppImages.categorybeauty,
+//     'fragrances': AppImages.categoryfragrance,
+//     'furniture': AppImages.categoryfurniture,
+//     'groceries': AppImages.categorygrocery,
+//     'home-decoration': AppImages.categoryhomedecor,
+//     'womens-watches': AppImages.categorywomenwatches,
+//     'womens-dresses': AppImages.categorytwomendress,
+//     'womens-shoes': AppImages.categorywomenshoe,
+//     'mens-shirts': AppImages.categorymenshirt,
+//     'mens-shoes': AppImages.categorymenshoes,
+//     'mens-watches': AppImages.categorymenwatch,
+//     'laptops': AppImages.categorylaptop,
+//     'motorcycle': AppImages.categorymotorcycle,
+//     'automotive': AppImages.categoryvehicle,
+//     'lighting': AppImages.categoryhomedecor,
+//     'smartphones': AppImages.smartphone,
+//     'tablets': AppImages.categorytablets,
+//     'tops': AppImages.categorytops,
+//     'vehicle':AppImages.categoryvehicle,
+//     'sunglasses': AppImages.categorysunglass,
+//     'skin-care': AppImages.categoryskincare,
+//     'kitchen-accessories': AppImages.categorykitchenaccesories,
+//     'sports-accessories': AppImages.categorysportsaccesories,
+//     'mobile-accessories': AppImages.categorymobileaccesories,
+//     'womens-bags': AppImages.categorywomenbag,
+//     'womens-jewellery':AppImages.categoryjwellery
+//   };
+//
+//
+//   CategoryTile({super.key, required this.category});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     // final imagePath = categoryImages[category.slug] ??;
+//     final imagePath = categoryImages[category.slug];
+//     return Container(
+//       decoration: BoxDecoration(
+//         borderRadius: BorderRadius.circular(12.r),
+//         color: Colors.white,
+//         boxShadow: [
+//           BoxShadow(
+//             color: Colors.grey.withOpacity(0.2),
+//             blurRadius: 4,
+//             offset: Offset(2, 2),
+//           ),
+//         ],
+//       ),
+//       padding: EdgeInsets.all(8.w),
+//       child: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           Expanded(
+//             child: Image.asset(imagePath!, fit: BoxFit.contain),
+//           ),
+//           SizedBox(height: 4.h),
+//           Text(
+//             category.name,
+//             textAlign: TextAlign.center,
+//             style: TextStyle(fontSize: 10.sp),
+//             maxLines: 2,
+//             overflow: TextOverflow.ellipsis,
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
