@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:innsouls_flutter/app/modules/cart/views/cart_view.dart';
-import 'package:innsouls_flutter/app/modules/filter/views/filter_view.dart';
 import 'package:innsouls_flutter/app/modules/home/views/home_view.dart';
 import 'package:innsouls_flutter/app/modules/profile/views/profile_view.dart';
 import 'package:innsouls_flutter/app/modules/wishlist/views/wishlist_view.dart';
 
+import '../../../data/models/productmodel.dart';
+import '../../checkout/view/myorder.dart';
+
+
 class LandingController extends GetxController {
   static LandingController get to => (Get.isRegistered<LandingController>() == false) ? Get.put<LandingController>(LandingController()) : Get.find();
 
-  LandingItem selectedPage = LandingItem.home;
+  LandingItem selectedPage = LandingItem.Home;
 
   void changePage({required LandingItem page}) {
     selectedPage = page;
@@ -33,27 +35,37 @@ class LandingController extends GetxController {
 
   Widget getPage() {
     switch (selectedPage) {
-      case LandingItem.home:
+      case LandingItem.Home:
         return HomeView();
-      case LandingItem.wishlist:
+      case LandingItem.Wishlist:
         return WishlistView();
-      case LandingItem.filter:
-        return FilterView();
-      case LandingItem.cart:
-        return CartView();
-      case LandingItem.profile:
+      // case LandingItem.filter:
+      //   return FilterView();
+      case LandingItem.MyOrders:
+        return MyOrdersScreen();
+      case LandingItem.Profile:
         return ProfileView();
     }
   }
 
+  // void onPop() {
+  //   if (selectedPage != LandingItem.Home) {
+  //     selectedPage = LandingItem.Home;
+  //     update();
+  //     return;
+  //   }
+  //   Get.back();
+  // }
   void onPop() {
-    if (selectedPage != LandingItem.home) {
-      selectedPage = LandingItem.home;
+    if (selectedPage != LandingItem.Home) {
+      selectedPage = LandingItem.Home;
       update();
-      return;
+    } else {
+      Get.back(); // Exit app or go to previous route
     }
-    Get.back();
   }
+
 }
 
-enum LandingItem { home, wishlist, filter, cart, profile }
+enum LandingItem { Home, Wishlist, MyOrders, Profile }
+

@@ -14,7 +14,7 @@ class SectionTitleBar extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text('Categories', style: AppTextStyle.rTextRalewayBlack22w700),
+        Text(title, style: AppTextStyle.rTextRalewayBlack22w700),
         Spacer(),
         if (onSeeAll != null) ...[
           Text("See All", style: AppTextStyle.rTextRalewayBlack15w700),
