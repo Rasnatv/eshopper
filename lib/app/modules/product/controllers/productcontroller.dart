@@ -13,7 +13,7 @@ class ProductController extends GetxController {
   var isFetchingMore = false.obs;
   var hasMore = true.obs;
   var products = <Product>[].obs;
-  var cartItems = <Product>[].obs;
+ // var cartItems = <Product>[].obs;
   var categoryProducts = <Product>[].obs;
   var isCategoryLoading = false.obs;
 

@@ -13,6 +13,7 @@ class ProfileView extends GetView<AuthController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        scrolledUnderElevation: 0,
       backgroundColor: Colors.white,
       title: const Text('Account'),
       leading: IconButton(

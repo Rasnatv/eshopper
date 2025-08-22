@@ -178,7 +178,7 @@ import '../widget/categoryimgmap.dart';
 import '../widget/categoryshimmerrow.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  //final CategoryController categoryController = Get.put(CategoryController());
+
   final categoryController=Get.put(CategoryController());
 
   final Map<String, String> categoryImages = CategoryImageMap.categoryImages;

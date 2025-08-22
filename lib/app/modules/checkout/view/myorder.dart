@@ -115,7 +115,7 @@ class MyOrdersScreen extends StatelessWidget {
                       contentPadding: EdgeInsets.zero,
                       leading: Image.network(product.thumbnail, width: 50, height: 50),
                       title: Text(product.title),
-                      subtitle: Text('Price: \$${product.price}'),
+                      subtitle: Text('Price: \₹${product.price}'),
                     )),
                   ],
                 ),

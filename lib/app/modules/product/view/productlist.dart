@@ -183,21 +183,6 @@ class ProductListScreen extends StatelessWidget {
 
       return Column(
         children: [
-          // GridView.builder(
-          //   shrinkWrap: true,
-          //   physics: const NeverScrollableScrollPhysics(),
-          //   padding: const EdgeInsets.all(8.0),
-          //   itemCount: productController.products.length,
-          //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          //     crossAxisCount: 2,
-          //     crossAxisSpacing: 10,
-          //     mainAxisSpacing: 10,
-          //     childAspectRatio: 0.7,
-          //   ),
-          //   itemBuilder: (context, index) {
-          //     final product = productController.products[index];
-          //     return ProductCard(product: product);
-          //   },
 
           Gridviewlayout(itemcount: productController.products.length, itembuilder: (context,index){
             final product = productController.products[index];
